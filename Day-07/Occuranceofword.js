@@ -6,11 +6,11 @@ function Occurance(InputString,FindWord){
     // console.log(resArr)
 
     result = [];
-    InedxofWord = InputString.indexOf(FindWord);
+    IndexofWord = InputString.indexOf(FindWord);
  
     while(InedxofWord!= -1){
        result.push(InedxofWord);
-       InedxofWord = InputString.indexOf(FindWord, InedxofWord+1);
+       IndexofWord = InputString.indexOf(FindWord, IndexofWord+1);
     }
 
     console.log(result)
