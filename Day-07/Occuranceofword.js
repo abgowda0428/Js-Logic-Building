@@ -6,14 +6,16 @@ function Occurance(InputString,FindWord){
     // console.log(resArr)
 
     result = [];
+    sum = 0;
     IndexofWord = InputString.indexOf(FindWord);
  
-    while(InedxofWord!= -1){
-       result.push(InedxofWord);
+    while(IndexofWord!= -1){
+       result.push(IndexofWord);
        IndexofWord = InputString.indexOf(FindWord, IndexofWord+1);
+       sum ++
     }
 
-    console.log(result)
+    console.log(result, `The Words are Present , ${sum} Times In the Sentence.`)
 
 };
 
