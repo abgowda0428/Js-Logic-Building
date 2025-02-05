@@ -1,15 +1,25 @@
 // Printing the Number Pyramind.
 
-function Pyramid(n){
-  let spaces = "";
-    for(let j =1;j<=n;j++){
-      
-      for(let i =1;i<=n;i++){
-       spaces = spaces + "";
-      };
-      
-    };
-};
+function generatePyramid(inputNumber) {
+ 
+  for(let i = 1; i <= inputNumber; i++) {
+      let lineContent = "";
+      for(let space = 1; space <= inputNumber - i; space++)
+      {
+          lineContent = lineContent + " ";
+      }
 
-Pyramid(5);
-// Incomplete
+      for(let count = 1; count <= i; count++) {
+          lineContent = lineContent + count;
+      }
+
+      for(let reverseCount = i - 1; reverseCount >= 1; reverseCount--) {
+          lineContent = lineContent + reverseCount;
+      }
+
+      console.log(lineContent);
+
+  }
+}
+
+generatePyramid(10);
